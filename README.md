@@ -1,4 +1,16 @@
-TT-SA-REALLIFE
+New Features and Optimizations
+==============================
+
+
+
+Planned Features
+================
+
+
+
+
+
+OLD NOTES AND INSTRUCTIONS
 ==============
 
 The old TerraTex Reallife Script
