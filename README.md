@@ -1,12 +1,16 @@
 New Features and Optimizations
 ==============================
-
+* Work in progress
 
 
 Planned Features
 ================
-
-
+* Stock system
+* New jobs
+* New business objects
+* Improve business objects in general
+* Stats and rankings
+* Better balancing for higher motivation
 
 
 
