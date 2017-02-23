@@ -1,4 +1,4 @@
-# MAKE TERRATEX GREAT AGAIN
+MAKE TERRATEX GREAT AGAIN
 
 New Features and Optimizations
 ==============================
