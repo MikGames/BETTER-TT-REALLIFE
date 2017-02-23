@@ -6,6 +6,7 @@ New Features and Optimizations
 Planned Features
 ================
 * Stock system
+* Startup investment system
 * New jobs
 * New business objects
 * Improve business objects in general
