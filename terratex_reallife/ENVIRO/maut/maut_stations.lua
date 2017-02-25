@@ -1,7 +1,7 @@
 local intakt_maut=2
 local schranken_maut_model_id=968
 local schranke_open_time=5000
-local maut_price=1
+local maut_price=50
 
 left_side_maut={
 --{markerx,markery,markerz,schrankex,schrankey,schrankez,schrankerx,schrankeoffenry,schrankerz,schrankezury(10),aktiv(11),markerelement(12),schrankenelement(13)}
@@ -82,7 +82,7 @@ function onOpenMautStelle(thePlayer)
 				if(usage)then
 					if(getPlayerMoney(thePlayer)>(maut_price-0.01))then
                         changePlayerMoney(thePlayer,-maut_price,"sonstiges","Maut")
-                        changeBizKasse(14, maut_price/10, "Bezinkauf")
+                        changeBizKasse(14, maut_price, "Bezinkauf")
 						outputChatBox("vielen Dank, dass Sie unsere Grenzstation verwenden!",thePlayer,255,0,0)
 						outputChatBox(string.format("Es wurden ihnen %s$ Mautgebühren abgezogen!", maut_price),thePlayer,255,0,0)
 						outputChatBox("Einen schönen Tag noch!",thePlayer,255,0,0)

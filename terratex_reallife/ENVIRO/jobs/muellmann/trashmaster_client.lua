@@ -156,7 +156,6 @@ function enterTrashMasterCheckpoint(hitPlayer)
 				if(theElement[4]==source)then
 					showError(getLocalPlayer(),"Der Müll wird verladen bitte warte einen Moment!")
 					setElementFrozen(getPedOccupiedVehicle(getLocalPlayer()),true)
-					setTimer(unfreezeTrashVehicle,3000,1,getPedOccupiedVehicle(getLocalPlayer()))
 					trashPoints=trashPoints+1
 					outputChatBox(string.format("Du hast bereits %s Müllsäcke gesammelt!", trashPoints))
 					if( isElement ( theElement[4]))then destroyElement(theElement[4]) end
@@ -171,6 +170,7 @@ function enterTrashMasterCheckpoint(hitPlayer)
 			end
 			if(source==deponieMarker)then
 				triggerServerEvent("giveTrashUp",getLocalPlayer(),trashPoints)
+				createMuellTable()
 				trashPoints=0
 				local restmarker=0
 				for theKey,theElement in ipairs(playerJobMarkers) do

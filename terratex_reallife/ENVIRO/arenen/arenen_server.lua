@@ -71,12 +71,12 @@ addCommandHandler("arenaquit",quit_arena,false,false)
 addEvent("goArena_Event",true)
 function goArena_Event_func(arnennr)
 	--outputChatBox(tostring(arnennr))
-	if(getPlayerMoney(source)>49.99)then
+	if(getPlayerMoney(source)>99.99)then
 		if(arnennr==1)then
 			if(vioGetElementData(source,"waffenLic")==1)then
 				if(getGunGamePlayer()<17)then
-					changePlayerMoney(source,-50,"sonstiges","Arenaeintritt","GunGame")
-                    changeBizKasse(11, 12.5, "Eintritt Arena")
+					changePlayerMoney(source,-100,"sonstiges","Arenaeintritt","GunGame")
+                    changeBizKasse(11, 100, "Eintritt Arena")
 					vioSetElementData(source,"inArena",1)
 					enterGunGame(source)
 				else
@@ -86,20 +86,20 @@ function goArena_Event_func(arnennr)
 				outputChatBox("Für die GunGame Arena benötigst du einen Waffenschein!",source,255,0,0)				
 			end
 		elseif(arnennr==2)then
-            changePlayerMoney(source,-50,"sonstiges","Arenaeintritt","Stunt")
-            changeBizKasse(11, 12.5, "Eintritt Arena")
+            changePlayerMoney(source,-100,"sonstiges","Arenaeintritt","Stunt")
+            changeBizKasse(11, 100, "Eintritt Arena")
 			vioSetElementData(source,"inArena",2)
 			stunt_join(source)
 		elseif(arnennr==3)then
 			if(not(isDurbyStarted))then
-                changePlayerMoney(source,-50,"sonstiges","Arenaeintritt","Durby")
-                changeBizKasse(11, 12.5, "Eintritt Arena")
+                changePlayerMoney(source,-100,"sonstiges","Arenaeintritt","Durby")
+                changeBizKasse(11, 100, "Eintritt Arena")
 				vioSetElementData(source,"inArena",3)
 				enter_durby_arena(source)
 			end
 		end
 	else
-		outputChatBox("Du hast nicht genug Geld! Der Eintritt kostet 50$",source,255,0,0)
+		outputChatBox("Du hast nicht genug Geld! Der Eintritt kostet 100$",source,255,0,0)
 	end
 end
 addEventHandler("goArena_Event",getRootElement(),goArena_Event_func)

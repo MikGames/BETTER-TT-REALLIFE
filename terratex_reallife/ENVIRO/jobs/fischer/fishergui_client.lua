@@ -256,7 +256,7 @@ function getFish()
   --  outputChatBox("Rest: "..table.getSize(randfishes)+5)--54
 
 	fish=math.random(1,(table.getSize(randfishes)+table.getSize(randmuell)+5))
-	entkommentimer=setTimer(fishOut,5000,1)
+	entkommentimer=setTimer(fishOut,1800,1)
 end
 
 function fishOut()
@@ -266,7 +266,7 @@ function fishOut()
 		guiSetText(FischerGUI_Label[1],"Der Fisch ist entkommen! Wirf die Angel neu aus!")
 		fish=0
 	else
-		entkommentimer=setTimer(fishOut,5000,1)		
+		entkommentimer=setTimer(fishOut,1800,1)		
 	end
 end
 

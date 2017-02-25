@@ -33,7 +33,12 @@ flys_auftragstypen_skilllevel = {
 	{1000, 5000, 1200, 1680, 1, 3},
 	{4000, 8000, 2000, 2800, 3, 2},
 	{10000, 20000, 2500, 3500, 2, 2},
-	{25000, 50000, 5000, 7000, 2, 2}
+	{25000, 50000, 5000, 7000, 2, 2},
+	{30000, 60000, 7000, 8000, 2, 2},
+	{50000, 70000, 8000, 9000, 2, 2},
+	{60000, 80000, 10000, 12000, 2, 2},
+	{70000, 80000, 12000, 15000, 2, 2},
+	{750000, 100000, 20000, 30000, 2, 2},
 	}
 	
 flys_last_auftrage = {}
@@ -69,7 +74,7 @@ addEventHandler("onClientResourceStart",resourceRoot,
 		guiSetVisible(GUIflysJob_Window[1],false)
 		addEventHandler ( "onClientGUIClick", GUIflysJob_Button[2], closeflugyerGui, false )
 		addEventHandler ( "onClientGUIClick", GUIflysJob_Button[1], getflugyerGui, false )
-		setTimer(cancelFlyBehindyTimer,300000,1)
+		setTimer(cancelFlyBehindyTimer,0,1)
     end
 )
 
@@ -91,7 +96,7 @@ function getflugyerGui()
             if (getPlayerMoney(getLocalPlayer())>=flys_last_auftrage[row][1])then
                 triggerServerEvent("goflugyAuftrag_Event",getLocalPlayer(),flys_last_auftrage[row])
                 can_see_flugy_gui=false
-                FlybehindyTimer=setTimer(can_see_flugy_gui_delete,300000,1)
+                FlybehindyTimer=setTimer(can_see_flugy_gui_delete,0,1)
                 closeflugyerGui()
             else
                 outputChatBox("Du kannst die Sicherheiten nicht bezahlen!",255,0,0)

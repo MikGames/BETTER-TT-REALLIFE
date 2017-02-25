@@ -117,7 +117,7 @@ function buySuperShopGUI(id)
 
 
         if(playerbetrag>0)then
-            changeBizKasse(8, playerbetrag/10, "Einkauf")   --> id 8
+            changeBizKasse(8, playerbetrag, "Einkauf")   --> id 8
             changePlayerMoney(source,-playerbetrag,"sonstiges","Einkauf im 24/7")
         end
 	end
